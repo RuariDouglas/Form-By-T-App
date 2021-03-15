@@ -7,34 +7,40 @@ import DropdownLinks from "./DropdownLinks";
 
 const SideNav = ({ menuStatus, setMenuStatus }) => {
   return (
-    <div className="side-nav">
+    <nav className="side-nav">
       <CloseIcon
         className="close-icon"
         onClick={() => setMenuStatus(!menuStatus)}
       />
-      <nav aria-label="Menu Links" className="nav--menu">
-        <a href="CHANGEME.COM" className="nav--menu__link">
-          Home
-        </a>
-        <a className="nav--menu__link">
-          <strong>Shop</strong>
-        </a>
-        <nav className="nav--dropdown">
-          <DropdownLinks />
-        </nav>
-        <a href="CHANGEME.COM" className="nav--menu__link">
-          About
-        </a>
-      </nav>
-      <nav aria-label="Account Links" className="nav--account">
-        <a href="CHANGEME.COM" className="nav--account__link">
+      <ul aria-label="Menu Links" className="main-menu">
+        <li className="main-menu__item">
+          <a href="CHANGEME.COM" className="main-menu__link">
+            Home
+          </a>
+        </li>
+        <li className="main-menu__item">
+          <a className="main-menu__link">
+            <strong>Shop</strong>
+          </a>
+          <div className="dropdown">
+            <DropdownLinks />
+          </div>
+        </li>
+        <li className="main-menu__item">
+          <a href="CHANGEME.COM" className="menu__link">
+            About
+          </a>
+        </li>
+      </ul>
+      <ul aria-label="Account Links" className="account-menu">
+        <a href="CHANGEME.COM" className="account-menu__link">
           Login
         </a>
-        <a href="CHANGEME.COM" className="nav--account__link">
+        <a href="CHANGEME.COM" className="account-menu__link">
           <ShoppingCartSharpIcon />
         </a>
-      </nav>
-    </div>
+      </ul>
+    </nav>
   );
 };
 

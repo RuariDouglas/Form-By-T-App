@@ -24,31 +24,33 @@ const Nav = () => {
       {menuStatus && (
         <SideNav menuStatus={menuStatus} setMenuStatus={setMenuStatus} />
       )}
-      <header>
+      <header className="full-nav">
         {/* MAIN MENU LINKS */}
-        <div className="nav-container">
-          <nav aria-label="Menu Links" className="nav--menu">
-            <a href="CHANGEME.COM" className="nav--menu__link">
-              Home
-            </a>
-            <a
-              href="CHANGEME.COM"
-              onClick={showDropdown}
-              className="nav--menu__link nav--menu__link--store"
-            >
-              Shop
-            </a>
-            {/* DROPDOWN */}
-            {dropdownStatus && (
-              <nav className="nav--menu__dropdown">
-                <DropdownLinks />
-              </nav>
-            )}
-            <a href="CHANGEME.COM" className="nav--menu__link">
-              About
-            </a>
-          </nav>
-        </div>
+        <nav aria-label="Menu Links" className="main-nav">
+          <ul className="main-nav__list">
+            <li className="main-nav__item">
+              <a href="CHANGEME.COM" className="link">
+                Home
+              </a>
+            </li>
+            <li className="main-nav__item main-nav__item--store">
+              <a href="CHANGEME.COM" className="link link--store">
+                Shop
+              </a>
+              <ul className="dropdown__list">
+                <li className="dropdown__item">
+                  <DropdownLinks />
+                </li>
+              </ul>
+            </li>
+            <li className="main-nav__item">
+              <a href="CHANGEME.COM" className="link">
+                About
+              </a>
+            </li>
+          </ul>
+          {/* DROPDOWN */}
+        </nav>
         <div className="logo-container">
           <picture>
             <source srcSet={LogoWeb} type="image/webp" />
@@ -57,16 +59,20 @@ const Nav = () => {
           </picture>
         </div>
         {/* MAIN MENU LINKS */}
-        <div className="nav-container">
-          <nav aria-label="Account Links" className="nav--account">
-            <a href="CHANGEME.COM" className="nav--account__link">
-              Login
-            </a>
-            <a href="CHANGEME.COM" className="nav--account__link">
-              <ShoppingCartSharpIcon />
-            </a>
-          </nav>
-        </div>
+        <nav aria-label="Account Links" className="acc-nav">
+          <ul className="acc-nav__list">
+            <li className="acc-nav__item">
+              <a href="CHANGEME.COM" className="link">
+                Login
+              </a>
+            </li>
+            <li className="acc-nav__item">
+              <a href="CHANGEME.COM" className="link">
+                <ShoppingCartSharpIcon />
+              </a>
+            </li>
+          </ul>
+        </nav>
         <div
           onClick={() => setMenuStatus(!menuStatus)}
           className="hamburger"

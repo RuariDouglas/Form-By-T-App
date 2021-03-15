@@ -1,3 +1,4 @@
+// MOBILE FIRST
 header {
     display: flex;
     justify-content: space-between;
@@ -5,12 +6,13 @@ header {
     height: 5.25rem;
 }
 
-.nav-container {
-    display: none;
+.link {
+    text-transform: uppercase;
 }
 
-.nav--menu__link {
-    text-transform: uppercase;
+.main-nav,
+.acc-nav {
+    display: none;
 }
 
 .logo {
@@ -56,20 +58,20 @@ header {
         right: 1rem;
         top: 2rem;
     }
-    .nav--menu {
+    .main-menu {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
     }
-    .nav--menu__link {
+    .main-menu__link {
         margin-top: 1rem;
     }
-    .nav--dropdown {
+    .dropdown {
         display: flex;
         flex-direction: column;
         transform: translateX(1rem);
     }
-    .nav--account {
+    .account-menu {
         align-self: flex-end;
         justify-self: flex-end;
         width: 100%;
@@ -87,29 +89,36 @@ header {
 
 // TABLETS
 @media screen and (min-width: 768px) {
-    .nav-container {
-        display: flex;
-    }
-    .logo-container {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-    .nav--menu__link {
-        padding: 1rem;
-    }
-    .nav--account {
-        display: flex;
-    }
-    .nav--account__link {
-        padding: 1rem;
-    }
-    .nav--menu__dropdown {
-        display: none;
-    }
     .hamburger {
         display: none;
+    }
+    .full-nav {
+        .main-nav,
+        .acc-nav,
+        .main-nav__list,
+        .acc-nav__list {
+            display: flex;
+        }
+        .main-nav__item,
+        .acc-nav__item {
+            padding: 1rem;
+        }
+        .dropdown__list {
+            display: none;
+        }
+        .main-nav__item--store {
+            &:hover {
+                .dropdown__list,
+                .dropdown__item {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .dropdown__list {
+                    position: absolute;
+                    background-color: $white;
+                }
+            }
+        }
     }
 }
 
