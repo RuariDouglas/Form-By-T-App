@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,300&family=Roboto:wght@300;500&display=swap");
+:root {
+    font-size: 16px;
+}
+
+// PHONES
+@media screen and (min-width: 576px) {}
+
+// TABLETS
+@media screen and (min-width: 768px) {}
+
+// DESKTOP
+@media screen and (min-width: 992px) {
+     :root {
+        font-size: 18px;
+    }
+}
+
+// HI RES
+@media screen and (min-width: 1200px) {
+     :root {
+        font-size: 20px;
+    }
+}
