@@ -27,6 +27,7 @@ img {
 body {
     font-family: "Roboto Mono", monospace;
     font-weight: 300;
+    background: url("../images/bg-noise.png"), $white;
     background-color: $bg;
 }
 
@@ -35,6 +36,31 @@ body {
     z-index: -25;
     height: 100%;
     width: 100%;
+}
+
+// MEDIA QUERIES
+// PHONES
+@media screen and (min-width: 576px) {}
+
+// TABLETS
+@media screen and (min-width: 768px) {}
+
+// DESKTOP
+@media screen and (min-width: 992px) {
+     :root {
+        font-size: 18px;
+    }
+    .wrapper {
+        width: 80vw;
+        margin: 0 auto;
+    }
+}
+
+// HI RES
+@media screen and (min-width: 1200px) {
+     :root {
+        font-size: 20px;
+    }
 }
 
 // IMPORT STYLESHEETS

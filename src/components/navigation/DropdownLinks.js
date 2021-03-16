@@ -4,6 +4,9 @@ const DropdownLinks = () => {
   return (
     <>
       <a href="CHANGEME.COM" className="dropdown__link">
+        <strong>NEW ARRIVALS</strong>
+      </a>
+      <a href="CHANGEME.COM" className="dropdown__link">
         Dresses
       </a>
       <a href="CHANGEME.COM" className="dropdown__link">

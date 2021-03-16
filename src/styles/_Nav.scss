@@ -15,6 +15,12 @@ header {
     display: none;
 }
 
+.acc-nav__item {
+    .link {
+        font-size: 0.9rem;
+    }
+}
+
 .logo {
     height: 5.25rem;
     width: 5.25rem;
@@ -89,8 +95,16 @@ header {
 
 // TABLETS
 @media screen and (min-width: 768px) {
+    header {
+        align-items: stretch;
+    }
     .hamburger {
         display: none;
+    }
+    .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .full-nav {
         .main-nav,
@@ -101,21 +115,47 @@ header {
         }
         .main-nav__item,
         .acc-nav__item {
+            display: flex;
+            align-items: center;
             padding: 1rem;
         }
-        .dropdown__list {
+        .dropdown {
             display: none;
         }
         .main-nav__item--store {
             &:hover {
-                .dropdown__list,
-                .dropdown__item {
+                background: url("../images/bg-noise.png"), $white;
+                .dropdown {
+                    display: flex;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 5.25rem;
+                    width: 100%;
+                }
+                .left-col,
+                .right-col {
+                    width: 50%;
+                    padding: 1rem 2rem;
+                    position: relative;
+                }
+                .left-col {
+                    background: url("../images/bg-noise.png"), $white;
+                }
+                .right-col {
+                    background: url("../images/bg-noise.png"), linear-gradient(294.72deg, #f8dab8 -12.99%, #eaa182 100%);
+                }
+                .dropdown__links {
                     display: flex;
                     flex-direction: column;
+                    position: relative;
+                    padding-left: 3.5rem;
+                    z-index: 1;
                 }
-                .dropdown__list {
-                    position: absolute;
-                    background-color: $white;
+                .dropdown__link {
+                    &:hover {
+                        text-decoration: line-through;
+                    }
                 }
             }
         }
@@ -126,6 +166,15 @@ header {
 @media screen and (min-width: 992px) {
      :root {
         font-size: 18px;
+    }
+    .full-nav {
+        .main-nav__item--store {
+            &:hover {
+                .dropdown {
+                    width: 80vw;
+                }
+            }
+        }
     }
 }
 

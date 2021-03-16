@@ -8,6 +8,7 @@ import DropdownLinks from "./DropdownLinks";
 import ShoppingCartSharpIcon from "@material-ui/icons/ShoppingCartSharp";
 import LogoPng from "../../images/logo.png";
 import LogoWeb from "../../images/logo.webp";
+import NoiseBg from "../../images/bg-noise.png";
 
 const Nav = () => {
   // STATE
@@ -24,7 +25,7 @@ const Nav = () => {
       {menuStatus && (
         <SideNav menuStatus={menuStatus} setMenuStatus={setMenuStatus} />
       )}
-      <header className="full-nav">
+      <header className="full-nav wrapper">
         {/* MAIN MENU LINKS */}
         <nav aria-label="Menu Links" className="main-nav">
           <ul className="main-nav__list">
@@ -37,11 +38,17 @@ const Nav = () => {
               <a href="CHANGEME.COM" className="link link--store">
                 Shop
               </a>
-              <ul className="dropdown__list">
-                <li className="dropdown__item">
-                  <DropdownLinks />
-                </li>
-              </ul>
+
+              <div className="dropdown">
+                <div className="left-col">
+                  <div className="dropdown__links">
+                    <DropdownLinks />
+                  </div>
+                </div>
+                <div className="right-col">
+                  <div className="dropdown__advert">Hello</div>
+                </div>
+              </div>
             </li>
             <li className="main-nav__item">
               <a href="CHANGEME.COM" className="link">
@@ -68,7 +75,8 @@ const Nav = () => {
             </li>
             <li className="acc-nav__item">
               <a href="CHANGEME.COM" className="link">
-                <ShoppingCartSharpIcon />
+                {/* <ShoppingCartSharpIcon /> */}
+                Cart
               </a>
             </li>
           </ul>
