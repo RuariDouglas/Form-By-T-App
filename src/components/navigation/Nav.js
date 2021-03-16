@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // COMPONENTS
 import SideNav from "./SideNav";
 import DropdownLinks from "./DropdownLinks";
+import Advert from "./Advert";
 
 // ICONS/IMAGES
 import ShoppingCartSharpIcon from "@material-ui/icons/ShoppingCartSharp";
@@ -46,7 +47,9 @@ const Nav = () => {
                   </div>
                 </div>
                 <div className="right-col">
-                  <div className="dropdown__advert">Hello</div>
+                  <div className="advert">
+                    <Advert />
+                  </div>
                 </div>
               </div>
             </li>

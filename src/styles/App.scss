@@ -12,6 +12,7 @@ $p200: #84766e;
     list-style: none;
     outline: none;
     border: none;
+    color: $p500;
 }
 
 a {
@@ -38,6 +39,23 @@ body {
     width: 100%;
 }
 
+.btn-arrow {
+    font-size: 0.9rem;
+    font-weight: 400;
+    position: relative;
+    color: $p500;
+    &:hover {
+        text-decoration: line-through;
+    }
+    &::after {
+        content: url("../images/btn-arrow.svg");
+        position: absolute;
+        top: 50%;
+        left: 6rem;
+        transform: translateY(-50%);
+    }
+}
+
 // MEDIA QUERIES
 // PHONES
 @media screen and (min-width: 576px) {}
@@ -50,16 +68,16 @@ body {
      :root {
         font-size: 18px;
     }
-    .wrapper {
-        width: 80vw;
-        margin: 0 auto;
-    }
 }
 
 // HI RES
 @media screen and (min-width: 1200px) {
      :root {
         font-size: 20px;
+    }
+    .wrapper {
+        width: 80vw;
+        margin: 0 auto;
     }
 }
 
