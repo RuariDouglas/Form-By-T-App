@@ -1,5 +1,57 @@
 .hero {
-    background-color: peachpuff;
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 1rem;
+}
+
+.hero__advert {
+    position: relative;
+    img {
+        height: 80vh;
+        object-fit: contain;
+    }
+}
+
+.hero__text {
+    position: absolute;
+    z-index: 30;
+    bottom: -4rem;
+}
+
+@media screen and (min-width: 576px) {
+    .hero__text {
+        position: absolute;
+        z-index: 30;
+        bottom: -4rem;
+        left: -4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    .sideNav {
+        display: none;
+    }
+    .menu,
+    .accounts-container {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 992px) {
+     :root {
+        font-size: 18px;
+    }
+}
+
+// HI RES
+@media screen and (min-width: 1200px) {
+     :root {
+        font-size: 20px;
+    }
 }

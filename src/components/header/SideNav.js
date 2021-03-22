@@ -2,14 +2,8 @@ import React from "react";
 
 const SideNav = () => {
   return (
-    <div className="bgShadow">
-      <div className="sideNav">
-        <ul className="sideNav__list">
-          <li className="sideNav__item">
-            <a className="link" href="#"></a>
-          </li>
-        </ul>
-
+    <div className="sideNav">
+      <div className="links-container">
         <ul className="dropdown__group">
           <li className="dropdown__item">
             <a className="dropdown__link" href="#">
@@ -78,6 +72,14 @@ const SideNav = () => {
             </a>
           </li>
         </ul>
+      </div>
+      <div className="accounts-container--sidenav">
+        <a className="link" href="#">
+          Login &nbsp;
+        </a>
+        <a className="link" href="#">
+          Cart
+        </a>
       </div>
     </div>
   );

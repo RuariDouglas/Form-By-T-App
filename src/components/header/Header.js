@@ -6,7 +6,7 @@ import SideNav from "./SideNav";
 // IMAGES
 import Logo from "../../images/logo.png";
 import LogoWebp from "../../images/logo.webp";
-import DownArrow from "../../images/down-arrow.svg";
+// import DownArrow from "../../images/down-arrow.svg";
 
 const Header = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -30,8 +30,8 @@ const Header = () => {
               </a>
             </li>
             <li className="menu__item menu__item--wDropdown">
-              <a className="link link--wArrow" href="#">
-                Shop <img src={DownArrow} alt="Down Arrow" />
+              <a className="link" href="#">
+                Shop
               </a>
               {/* DROPDOWN MENU */}
               <div className="dropdown">
@@ -115,10 +115,10 @@ const Header = () => {
         </div>
         <div className="accounts-container">
           <a className="link" href="#">
-            Login |
+            Login &nbsp;
           </a>
           <a className="link" href="#">
-            Create Account
+            Cart
           </a>
         </div>
         {/* HAMBURGER */}
