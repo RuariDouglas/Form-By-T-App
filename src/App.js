@@ -5,14 +5,14 @@ import "./styles/App.scss";
 import { Switch, Route } from "react-router-dom";
 
 // COMPONENTS
-import Nav from "./components/navigation/Nav";
+import Header from "./components/header/Header";
 // PAGES
 import Home from "./pages/Home";
 
 const App = () => {
   return (
     <>
-      <Nav></Nav>
+      <Header />
       <Switch>
         <Route path="/" exact>
           <Home />

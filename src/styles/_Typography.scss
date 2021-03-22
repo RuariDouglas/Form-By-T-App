@@ -3,6 +3,19 @@
     font-size: 16px;
 }
 
+// NAV
+.menu,
+.accounts-container {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.accounts-container {
+    .link {
+        font-style: italic;
+    }
+}
+
 // PHONES
 @media screen and (min-width: 576px) {}
 

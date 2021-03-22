@@ -1,13 +1,13 @@
 import React from "react";
 
 // COMPONENTS
-import IndexHero from "../components/IndexHero";
+import Hero from "../components/home/Hero";
 
 const Home = () => {
   return (
-    <div>
-      <IndexHero />
-    </div>
+    <>
+      <Hero />
+    </>
   );
 };
 
