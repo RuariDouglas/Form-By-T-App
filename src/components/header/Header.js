@@ -22,10 +22,82 @@ const Header = () => {
                 Home
               </a>
             </li>
-            <li className="menu__item">
+            <li className="menu__item menu__item--wDropdown">
               <a className="link" href="#">
                 Shop
               </a>
+              {/* DROPDOWN MENU */}
+              <div className="dropdown">
+                {/* GROUP 1 */}
+                <ul className="dropdown__group">
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      <span>NEW ARRIVALS</span>
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Dresses
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Tops
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Jackets
+                    </a>
+                  </li>
+                </ul>
+                {/* GROUP 2 */}
+                <ul className="dropdown__group">
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Pants
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Skirts
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Shorts
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Jumpsuits
+                    </a>
+                  </li>
+                </ul>
+                {/* GROUP 3 */}
+                <ul className="dropdown__group">
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Bags
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Face Masks
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Hats
+                    </a>
+                  </li>
+                  <li className="dropdown__item">
+                    <a className="dropdown__link" href="#">
+                      Hair Accessories
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li className="menu__item">
               <a className="link" href="#">
@@ -42,13 +114,9 @@ const Header = () => {
             Create Account
           </a>
         </div>
+        {/* HAMBURGER */}
+        <div className="hamburger"></div>
       </div>
-      {/* Free shipping banner */}
-      {/* Account Links */}
-      {/* Main Navigation
-          Logo
-          Links / Dropdown
-      */}
     </>
   );
 };

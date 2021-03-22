@@ -7,12 +7,29 @@
 .menu,
 .accounts-container {
     text-transform: uppercase;
-    font-size: 0.9rem;
+}
+
+.menu {
+    .link {
+        font-size: 0.9rem;
+    }
 }
 
 .accounts-container {
     .link {
+        font-size: 0.8rem;
         font-style: italic;
+    }
+}
+
+.dropdown__link {
+    text-transform: none;
+    font-size: 0.9rem;
+    &:hover {
+        text-decoration: line-through;
+    }
+    span {
+        font-weight: 500;
     }
 }
 

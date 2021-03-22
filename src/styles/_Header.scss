@@ -7,13 +7,46 @@
     height: 6rem;
 }
 
+.hamburger {
+    height: 0.5rem;
+    width: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        height: 0.1rem;
+        width: 100%;
+        background-color: $p500;
+    }
+}
+
+.dropdown {
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    background: url("../images/bg-noise.png"), $bg600;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 4rem;
+    width: 40rem;
+}
+
+.dropdown__group {
+    line-height: 1.4rem;
+}
+
 .logo-container {
     width: 7rem;
 }
 
 .menu,
 .accounts-container {
-    display: flex;
+    display: none;
     .link {
         &:hover {
             text-decoration: line-through;
@@ -24,5 +57,39 @@
 .menu {
     .link {
         padding: 0 1rem;
+    }
+}
+
+.menu__item--wDropdown {
+    &:hover {
+        .dropdown {
+            display: flex;
+        }
+    }
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    .menu,
+    .accounts-container {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 992px) {
+     :root {
+        font-size: 18px;
+    }
+}
+
+// HI RES
+@media screen and (min-width: 1200px) {
+     :root {
+        font-size: 20px;
     }
 }

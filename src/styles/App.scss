@@ -3,7 +3,7 @@ $bg: #faf4ed;
 $bg600: #f0e8df;
 $white: #fff;
 $p500: #271911;
-$p400: #4b3020;
+$p400: #463c36;
 $p200: #84766e;
 // RESET
 * {
@@ -59,13 +59,10 @@ body {
 }
 
 // MEDIA QUERIES
-// PHONES
 @media screen and (min-width: 576px) {}
 
-// TABLETS
 @media screen and (min-width: 768px) {}
 
-// DESKTOP
 @media screen and (min-width: 992px) {
      :root {
         font-size: 18px;
