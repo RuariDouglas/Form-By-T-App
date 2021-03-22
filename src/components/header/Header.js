@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+
+// COMPONENTS
+import SideNav from "./SideNav";
 
 // IMAGES
 import Logo from "../../images/logo.png";
 import LogoWebp from "../../images/logo.webp";
+import DownArrow from "../../images/down-arrow.svg";
 
 const Header = () => {
+  const [navToggle, setNavToggle] = useState(false);
+
   return (
     <>
+      {navToggle && <SideNav />}
       <div className="header">
         <div className="logo-container">
           <picture>
-            <source srcset={LogoWebp} type="image/webp" />
-            <source srcset={Logo} type="image/png" />
+            <source srcSet={LogoWebp} type="image/webp" />
+            <source srcSet={Logo} type="image/png" />
             <img src={Logo} alt="Form By T Logo" />
           </picture>
         </div>
@@ -23,8 +30,8 @@ const Header = () => {
               </a>
             </li>
             <li className="menu__item menu__item--wDropdown">
-              <a className="link" href="#">
-                Shop
+              <a className="link link--wArrow" href="#">
+                Shop <img src={DownArrow} alt="Down Arrow" />
               </a>
               {/* DROPDOWN MENU */}
               <div className="dropdown">
@@ -115,7 +122,12 @@ const Header = () => {
           </a>
         </div>
         {/* HAMBURGER */}
-        <div className="hamburger"></div>
+        <div onClick={() => setNavToggle(!navToggle)} className="hamburger">
+          <div className={`hamburger__line ${navToggle ? "rotate" : ""}`}></div>
+          <div
+            className={`hamburger__line ${navToggle ? "rotate2" : ""}`}
+          ></div>
+        </div>
       </div>
     </>
   );
