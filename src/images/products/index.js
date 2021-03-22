@@ -1,0 +1,9 @@
+export const Hero500Jpg = require("./hero_img-500.jpg");
+export const Hero1000Jpg = require("./hero_img-1000.jpg");
+export const Hero1500Jpg = require("./hero_img-1500.jpg");
+export const Hero4000Jpg = require("./hero_img-4000.jpg");
+export const Hero500Webp = require("./hero_img-500.webp");
+export const Hero1000Webp = require("./hero_img-1000.webp");
+export const Hero1500Webp = require("./hero_img-1500.webp");
+export const Hero4000Webp = require("./hero_img-4000.webp");
+export const HeroTest = require("./hero_test.png");

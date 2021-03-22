@@ -3,22 +3,6 @@
     font-size: 16px;
 }
 
-// NAV
-.dropdown__link {
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-}
-
-.advert__title {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
-.advert__description {
-    font-size: 0.8rem;
-}
-
 // PHONES
 @media screen and (min-width: 576px) {}
 
@@ -36,11 +20,5 @@
 @media screen and (min-width: 1200px) {
      :root {
         font-size: 20px;
-    }
-    // NAV
-    .advert__title {
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        font-weight: 300;
     }
 }

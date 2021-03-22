@@ -1,31 +1,4 @@
-// MOBILE FIRST
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5.25rem;
-}
-
-.link {
-    text-transform: uppercase;
-}
-
-.main-nav,
-.acc-nav {
-    display: none;
-}
-
-.acc-nav__item {
-    .link {
-        font-size: 0.9rem;
-    }
-}
-
-.logo {
-    height: 5.25rem;
-    width: 5.25rem;
-}
-
+// background: url("../images/bg-noise.png"), $white;
 .hamburger {
     cursor: pointer;
     margin-right: 1rem;
@@ -101,81 +74,6 @@ header {
     .hamburger {
         display: none;
     }
-    .logo-container {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .full-nav {
-        .main-nav,
-        .acc-nav,
-        .main-nav__list,
-        .acc-nav__list {
-            display: flex;
-        }
-        .main-nav__item,
-        .acc-nav__item {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-        }
-        .dropdown {
-            display: none;
-        }
-        .main-nav__item--store {
-            &:hover {
-                background: url("../images/bg-noise.png"), $white;
-                .dropdown {
-                    display: flex;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    top: 5.25rem;
-                    width: 100%;
-                    overflow: hidden;
-                }
-                .left-col,
-                .right-col {
-                    padding: 1rem;
-                    position: relative;
-                }
-                .left-col {
-                    width: 30%;
-                    background: url("../images/bg-noise.png"), $white;
-                }
-                .right-col {
-                    width: 70%;
-                    background: url("../images/bg-noise.png"), linear-gradient(294.72deg, #f8dab8 -12.99%, #eaa182 100%);
-                }
-                .dropdown__links {
-                    display: flex;
-                    flex-direction: column;
-                    position: relative;
-                    padding-left: 3.5rem;
-                    z-index: 1;
-                }
-                .dropdown__link {
-                    &:hover {
-                        text-decoration: line-through;
-                    }
-                }
-            }
-            // DROPDOWN ADVERT
-            .advert__image {
-                float: left;
-                height: 100%;
-                margin: 0 1rem 1rem 0;
-                box-shadow: 0 0 2rem rgba(157, 97, 71, 0.3);
-            }
-            .advert__title {
-                margin-bottom: 1rem;
-            }
-            .advert__description {
-                margin-bottom: 1rem;
-                max-width: 40rem;
-            }
-        }
-    }
 }
 
 // DESKTOP
@@ -189,14 +87,5 @@ header {
 @media screen and (min-width: 1200px) {
      :root {
         font-size: 20px;
-    }
-    .full-nav {
-        .main-nav__item--store {
-            &:hover {
-                .dropdown {
-                    width: 80vw;
-                }
-            }
-        }
     }
 }

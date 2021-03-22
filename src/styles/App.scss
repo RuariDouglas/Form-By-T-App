@@ -1,5 +1,6 @@
 // VARIABLES
 $bg: #faf4ed;
+$bg600: #f0e8df;
 $white: #fff;
 $p500: #271911;
 $p400: #4b3020;
@@ -42,6 +43,7 @@ body {
 .btn-arrow {
     font-size: 0.9rem;
     font-weight: 400;
+    font-style: italic;
     position: relative;
     color: $p500;
     &:hover {
@@ -84,3 +86,4 @@ body {
 // IMPORT STYLESHEETS
 @import "./Nav";
 @import "./Typography";
+@import "./Hero";
