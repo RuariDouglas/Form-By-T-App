@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 4rem;
     position: fixed;
     z-index: 150;
     background: url("../images/bg-noise.png"), $bg;
@@ -76,15 +76,15 @@
 
 // =============================== SIDE NAV ================================== //
 .sideNav {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     z-index: 150;
-    top: 6rem;
-    height: 100vh;
-    width: 100vw;
+    top: 4rem;
+    min-height: 100%;
+    width: 100%;
     background: url("../images/bg-noise.png"), $white;
-    padding: 1rem 0 0 2rem;
+    padding: 1rem 0 0 1rem;
 }
 
 .accounts-container--sidenav {
@@ -106,9 +106,9 @@
 }
 
 // MEDIA QUERIES
-@media screen and (min-width: 576px) {}
+@media all and (min-width: 576px) {}
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
     .header {
         padding: 0 2rem;
     }
@@ -124,15 +124,28 @@
     }
 }
 
-@media screen and (min-width: 992px) {
-     :root {
-        font-size: 18px;
+@media all and (min-width: 992px) {
+    .header {
+        height: 5rem;
+    }
+    .sideNav {
+        top: 5rem;
     }
 }
 
-// HI RES
-@media screen and (min-width: 1200px) {
-     :root {
-        font-size: 20px;
+@media all and (min-width: 1200px) {}
+
+// ORIENTATION
+@media all and (orientation: landscape) {
+    .sideNav {
+        top: 4rem;
     }
 }
+
+@media (orientation: landscape) and (min-width: 576px) {}
+
+@media (orientation: landscape) and (min-width: 768px) {}
+
+@media (orientation: landscape) and (min-width: 992px) {}
+
+@media (orientation: landscape) and (min-width: 992px) {}

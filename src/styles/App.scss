@@ -27,6 +27,8 @@ img {
 
 // GENERAL STYLES
 body {
+    position: relative;
+    height: 100%;
     font-family: "Roboto Mono", monospace;
     font-weight: 300;
     background: url("../images/bg-noise.png"), $bg;
@@ -62,18 +64,9 @@ body {
 
 @media screen and (min-width: 768px) {}
 
-@media screen and (min-width: 992px) {
-     :root {
-        font-size: 18px;
-    }
-}
+@media screen and (min-width: 992px) {}
 
-// HI RES
-@media screen and (min-width: 1200px) {
-     :root {
-        font-size: 20px;
-    }
-}
+@media screen and (min-width: 1200px) {}
 
 // IMPORT STYLESHEETS
 @import "./Typography";
