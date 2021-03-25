@@ -35,7 +35,7 @@
     }
 }
 
-// INDEX
+// HERO
 .hero__text {
     h2 {
         font-size: 2.5rem;
@@ -45,8 +45,24 @@
     }
 }
 
-// PHONES
+// PRODUCT GALLERY
+.gallery__product {
+    line-height: 1.1rem;
+    h3 {
+        color: $p500;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+    h5 {
+        color: $p400;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 0.9rem;
+    }
+}
+
 @media all and (min-width: 576px) {
+    // HERO
     .hero__text {
         h2 {
             font-size: 4.5rem;

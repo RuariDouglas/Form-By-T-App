@@ -1,0 +1,39 @@
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.gallery__link {
+    display: block;
+}
+
+.gallery__product {
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+    img {
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {
+    .gallery {
+        max-width: 70vw;
+        margin: 4rem auto;
+    }
+}
