@@ -2,7 +2,6 @@
     display: flex;
     flex-flow: row wrap;
     padding: 1rem;
-    margin-top: 4rem;
 }
 
 .gallery__link {
@@ -32,6 +31,7 @@
     .gallery {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
+        padding: 2rem;
     }
 }
 
@@ -40,6 +40,7 @@
 @media screen and (min-width: 1200px) {
     .gallery {
         max-width: 70vw;
-        margin: 4rem auto;
+        margin: 0 auto;
+        padding: 2rem 0;
     }
 }

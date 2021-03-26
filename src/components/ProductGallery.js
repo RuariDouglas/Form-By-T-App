@@ -11,11 +11,7 @@ const ProductGallery = (props) => {
       {dummyProducts.map((product, index) => {
         if (index < show) {
           return (
-            <Link
-              id={product.id}
-              className="gallery__link"
-              to={`/${product.id}`}
-            >
+            <Link className="gallery__link" to={`/${product.id}`}>
               <div className="gallery__product">
                 <img src={product.imgUrl} alt={product.title} />
                 <h3>{product.title}</h3>
