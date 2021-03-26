@@ -15,16 +15,21 @@
     background-color: transparent;
     img {
         display: block;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
     }
 }
 
 // MEDIA QUERIES
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 576px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .gallery {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
     }

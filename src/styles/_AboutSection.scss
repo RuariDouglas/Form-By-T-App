@@ -1,0 +1,51 @@
+.about-section {
+    padding: 4rem 1rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 4rem;
+    img {
+        margin-bottom: 2rem;
+        order: 1;
+        width: 10rem;
+    }
+    p {
+        width: 100%;
+        order: 2;
+    }
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 576px) {
+    .about-section {
+        align-items: flex-start;
+        justify-content: space-between;
+        img {
+            margin-bottom: 0;
+            width: 25%;
+        }
+        p {
+            width: 65%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-section {
+        justify-content: space-evenly;
+        img {
+            max-width: 12rem;
+        }
+        p {
+            max-width: 30rem;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {
+    .about-section {
+        max-width: 70vw;
+        margin: 4rem auto;
+    }
+}

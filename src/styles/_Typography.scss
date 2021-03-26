@@ -3,7 +3,7 @@
     font-size: 16px;
 }
 
-// NAV
+// HEADER
 .menu,
 .accounts-container {
     text-transform: uppercase;
@@ -28,9 +28,18 @@
 }
 
 // SIDENAV
+.sideNav {
+    .dropdown__group {
+        line-height: 1.5rem;
+    }
+    .dropdown__link {
+        font-size: 1rem;
+    }
+}
+
 .accounts-container--sidenav {
     .link {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-style: italic;
     }
 }
@@ -58,6 +67,14 @@
         font-weight: 300;
         font-style: italic;
         font-size: 0.9rem;
+    }
+}
+
+// ABOUT SECTION
+.about-section {
+    p {
+        color: $p200;
+        font-family: "Roboto";
     }
 }
 
