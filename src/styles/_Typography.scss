@@ -74,7 +74,50 @@
 .about-section {
     p {
         color: $p200;
-        font-family: "Roboto";
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+    }
+}
+
+// PRODUCT SLIDER
+.slider__header {
+    p {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $p500;
+        font-size: 1.1rem;
+    }
+}
+
+.slider__product {
+    line-height: 1.1rem;
+    h3 {
+        color: $p500;
+        font-size: 1rem;
+    }
+    h5 {
+        color: $p400;
+        font-size: 0.8rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+}
+
+.footer {
+    p {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+    .footer__title {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .footer__link {
+        color: $p400;
+    }
+    .footer__copyright {
+        font-size: 0.7rem;
+        font-style: italic;
     }
 }
 

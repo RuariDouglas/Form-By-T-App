@@ -15,7 +15,11 @@ const Home = () => {
       <Hero />
       <ProductGallery show={6} />
       <AboutSection />
-      <ProductSlider show={12} products={ProductImage} />
+      <ProductSlider
+        sliderTitle={"You may also like"}
+        show={12}
+        products={ProductImage}
+      />
     </>
   );
 };

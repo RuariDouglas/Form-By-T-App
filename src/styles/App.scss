@@ -47,15 +47,14 @@ body {
     font-style: italic;
     position: relative;
     color: $p500;
+    background-color: transparent;
+    cursor: pointer;
     &:hover {
         text-decoration: line-through;
     }
     &::after {
         content: url("../images/btn-arrow.svg");
-        position: absolute;
-        top: 50%;
-        left: 6rem;
-        transform: translateY(-50%);
+        margin-left: 0.5rem;
     }
 }
 
@@ -75,3 +74,4 @@ body {
 @import "./ProductGallery";
 @import "./ProductSlider";
 @import "./AboutSection";
+@import "./Footer";
