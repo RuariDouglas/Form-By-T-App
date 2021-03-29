@@ -107,7 +107,7 @@ const dummyProducts = [
     id: uuidv4(),
   },
   {
-    title: "Big Bag",
+    title: "You there?",
     sku: "sky-blue-dress",
     price: "$105.00",
     imgUrl: ProductImage,
