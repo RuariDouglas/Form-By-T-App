@@ -1,11 +1,23 @@
 .category {
     padding: 4rem 1rem;
     min-height: 100vh;
+    .gallery {
+        padding: 0 0 1rem;
+    }
 }
 
 .category__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb__arrow {
+    padding: 0 0.5rem;
 }
 
 @media all and (min-width: 576px) {}
@@ -23,4 +35,9 @@
     }
 }
 
-@media all and (min-width: 1200px) {}
+@media all and (min-width: 1200px) {
+    .category__header {
+        max-width: 70vw;
+        margin: 0 auto;
+    }
+}

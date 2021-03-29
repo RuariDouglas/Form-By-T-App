@@ -1,0 +1,21 @@
+.product {
+    padding: 4rem 1rem;
+    min-height: 100vh;
+}
+
+@media all and (min-width: 576px) {}
+
+@media all and (min-width: 768px) {
+    .product {
+        padding: 4rem 2rem;
+        min-height: 100vh;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .product {
+        padding-top: 5rem;
+    }
+}
+
+@media all and (min-width: 1200px) {}

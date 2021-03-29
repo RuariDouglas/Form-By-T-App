@@ -15,7 +15,7 @@ const ProductGallery = (props) => {
             <Link
               key={uuidv4()}
               className="gallery__link"
-              to={`/${product.id}`}
+              to={`/collections/${product.category}/${product.sku}`}
             >
               <div className="gallery__product">
                 <img src={product.imgUrl} alt={product.title} />

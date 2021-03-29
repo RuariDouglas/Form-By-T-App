@@ -9,6 +9,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/Footer";
 // PAGES
 import Category from "./pages/Category";
+import Product from "./pages/Product";
 import Home from "./pages/Home";
 
 const App = () => {
@@ -16,7 +17,10 @@ const App = () => {
     <>
       <Header />
       <Switch>
-        <Route path="/collections/:collectionName" exact>
+        <Route path="/collections/:collectionName/:productSku" exact>
+          <Product />
+        </Route>
+        <Route path="/collections/:collectionName">
           <Category />
         </Route>
         <Route path="/" exact>
