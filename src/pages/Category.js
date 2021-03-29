@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 // COMPONENTS
 import ProductGallery from "../components/product_gallery/ProductGallery";
 import Breadcrumb from "../components/Breadcrumb";
 
 const Category = () => {
+  const location = useLocation();
+  const categoryTitle = location.pathname.split("/")[2];
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -12,8 +15,8 @@ const Category = () => {
     <div className="category">
       <div className="category__header">
         <Breadcrumb />
-        <h1>Title</h1>
-        <p>Sort by</p>
+        <h1 className="category__title">{categoryTitle}</h1>
+        <p className="category__sort">Sort by</p>
       </div>
       <ProductGallery showPagination={true} productsPerPage={10} />
     </div>

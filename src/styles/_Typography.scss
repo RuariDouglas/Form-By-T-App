@@ -103,8 +103,16 @@
 }
 
 // CATEGORY PAGE
-.breadcrumb {
+.breadcrumb,
+.category__sort {
     font-size: 0.8rem;
+}
+
+.category__title {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    font-size: 3rem;
 }
 
 .footer {
