@@ -1,9 +1,41 @@
 .footer {
+    background: url("../images/bg-noise.png"), $bg600;
+}
+
+.footer__wrapper {
     display: flex;
-    margin: 2rem 1rem;
-    padding-top: 1rem;
+    margin: 2rem 1rem 0;
+    padding: 1rem;
     flex-flow: row wrap;
-    background-color: $p200;
+}
+
+.footer__newsletter {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    p {
+        max-width: 18rem;
+    }
+    input {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        background-color: transparent;
+        padding: 0.5rem;
+        border: 1px solid $p200;
+        font-weight: 300;
+        width: 100%;
+        max-width: 18rem;
+        margin: 0.5rem 0.5rem 0 0;
+        &::placeholder {
+            color: $p200;
+        }
+    }
+}
+
+.footer__form {
+    .btn-arrow {
+        font-size: 0.8rem;
+    }
 }
 
 .footer__group {
@@ -16,7 +48,7 @@
 
 @media screen and (min-width: 768px) {
     .footer {
-        margin: 2rem 2rem;
+        margin: 2rem 2rem 0;
     }
     .footer__group {
         width: 25%;
@@ -28,7 +60,10 @@
 
 @media screen and (min-width: 1200px) {
     .footer {
+        margin: 4rem auto 0;
+    }
+    .footer__wrapper {
         max-width: 70vw;
-        margin: 4rem auto;
+        margin: 0 auto;
     }
 }

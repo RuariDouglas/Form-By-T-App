@@ -92,7 +92,7 @@
     line-height: 1.1rem;
     h3 {
         color: $p500;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     h5 {
         color: $p400;
@@ -112,7 +112,8 @@
         text-transform: uppercase;
         font-weight: 500;
     }
-    .footer__link {
+    .footer__link,
+    .footer__text {
         color: $p400;
     }
     .footer__copyright {
