@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 // PRODUCTS
 // NOTE!!! DUMMYPRODUCTS will be retrieved from an API call on the "Page component"
 import dummyProducts from "../DummyProducts";
 // SWIPER
 // import Swiper core and required modules
-import SwiperCore, { Navigation, A11y } from "swiper";
+import SwiperCore, { A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.scss";
@@ -44,7 +45,7 @@ const ProductSlider = (props) => {
           {dummyProducts.map((product, index) => {
             if (index < show) {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={uuidv4()}>
                   <Link className="slider__link" to={`/${product.id}`}>
                     <div className="slider__product">
                       <img src={product.imgUrl} alt={product.title} />

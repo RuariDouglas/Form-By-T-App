@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 // PRODUCTS
 import dummyProducts from "../DummyProducts";
@@ -11,7 +12,11 @@ const ProductGallery = (props) => {
       {dummyProducts.map((product, index) => {
         if (index < show) {
           return (
-            <Link className="gallery__link" to={`/${product.id}`}>
+            <Link
+              key={uuidv4()}
+              className="gallery__link"
+              to={`/${product.id}`}
+            >
               <div className="gallery__product">
                 <img src={product.imgUrl} alt={product.title} />
                 <h3>{product.title}</h3>
