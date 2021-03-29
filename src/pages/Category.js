@@ -1,14 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-
 // COMPONENTS
 import ProductGallery from "../components/product_gallery/ProductGallery";
 import Breadcrumb from "../components/Breadcrumb";
+// COMMERCE
+import { commerce } from "../lib/commerce";
 
 const Category = () => {
   const location = useLocation();
   const categoryTitle = location.pathname.split("/")[2];
+  // Fetch and set products
+  const [products, setProducts] = useState([]);
+  const fetchProducts = async () => {
+    const { data } = await commerce.products.list();
+    setProducts(data);
+    console.log(products);
+  };
   useEffect(() => {
+    fetchProducts();
     window.scrollTo(0, 0);
   }, []);
   return (
