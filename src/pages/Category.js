@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 // COMPONENTS
 import ProductGallery from "../components/product_gallery/ProductGallery";
 import Breadcrumb from "../components/Breadcrumb";
-// COMMERCE
-import { commerce } from "../lib/commerce";
+// REDUX
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../redux/actions/cjsAction";
 
 const Category = () => {
+  const dispatch = useDispatch();
   const location = useLocation();
+  const products = useSelector((state) => state.cjs);
+  console.log(products);
   const categoryTitle = location.pathname.split("/")[2];
-  // Fetch and set products
-  const [products, setProducts] = useState([]);
-  const fetchProducts = async () => {
-    const { data } = await commerce.products.list();
-    setProducts(data);
-    console.log(products);
-  };
+
   useEffect(() => {
-    fetchProducts();
+    dispatch(getProducts());
     window.scrollTo(0, 0);
   }, []);
   return (
