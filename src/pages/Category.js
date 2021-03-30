@@ -10,8 +10,7 @@ import { getProducts } from "../redux/actions/cjsAction";
 const Category = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  const products = useSelector((state) => state.cjs);
-  console.log(products);
+  const { products, loading } = useSelector((state) => state.cjs);
   const categoryTitle = location.pathname.split("/")[2];
 
   useEffect(() => {
@@ -25,7 +24,12 @@ const Category = () => {
         <h1 className="category__title">{categoryTitle}</h1>
         <p className="category__sort">Sort by</p>
       </div>
-      <ProductGallery showPagination={true} productsPerPage={10} />
+      <ProductGallery
+        products={products}
+        loading={loading}
+        showPagination={true}
+        productsPerPage={10}
+      />
     </div>
   );
 };

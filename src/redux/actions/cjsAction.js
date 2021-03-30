@@ -6,7 +6,9 @@ export const getProducts = (section) => async (dispatch) => {
     const { data } = await commerce.products.list();
     dispatch({
       type: "FETCH_PRODUCTS",
-      payload: { products: data },
+      payload: {
+        products: data,
+      },
     });
   } catch {
     console.log("error");

@@ -17,9 +17,10 @@ import "swiper/components/navigation/navigation.scss";
 SwiperCore.use([A11y]);
 
 const ProductSlider = (props) => {
-  const show = props.show;
-  const sliderTitle = props.sliderTitle;
-
+  const { productsPerPage, startIndex, sliderTitle, products, loading } = props;
+  if (loading) {
+    return <h2>Loading....</h2>;
+  }
   return (
     <>
       <div className="slider__header">
@@ -37,20 +38,20 @@ const ProductSlider = (props) => {
               slidesPerView: 4,
             },
             1024: {
-              slidesPerView: 6,
+              slidesPerView: 5,
             },
           }}
           scrollbar={{ draggable: true }}
         >
-          {dummyProducts.map((product, index) => {
-            if (index < show) {
+          {products.map((product, index) => {
+            if (index < productsPerPage && index > startIndex) {
               return (
                 <SwiperSlide key={uuidv4()}>
-                  <Link className="slider__link" to={`/${product.id}`}>
+                  <Link className="slider__link" to={`/${product.sku}`}>
                     <div className="slider__product">
-                      <img src={product.imgUrl} alt={product.title} />
-                      <h3>{product.title}</h3>
-                      <h5>{product.price}</h5>
+                      <img src={product.media.source} alt={product.name} />
+                      <h3>{product.name}</h3>
+                      <h5>{product.price.formatted}</h5>
                     </div>
                   </Link>
                 </SwiperSlide>

@@ -1,5 +1,5 @@
 const initState = {
-  products: {},
+  products: [],
   loading: true,
 };
 
