@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-
-// PRODUCTS
-// NOTE!!! DUMMYPRODUCTS will be retrieved from an API call on the "Page component"
-import dummyProducts from "../DummyProducts";
 // SWIPER
 // import Swiper core and required modules
 import SwiperCore, { A11y } from "swiper";
@@ -17,7 +13,7 @@ import "swiper/components/navigation/navigation.scss";
 SwiperCore.use([A11y]);
 
 const ProductSlider = (props) => {
-  const { productsPerPage, startIndex, sliderTitle, products, loading } = props;
+  const { startIndex, sliderTitle, products, loading } = props;
   if (loading) {
     return <h2>Loading....</h2>;
   }
@@ -44,14 +40,14 @@ const ProductSlider = (props) => {
           scrollbar={{ draggable: true }}
         >
           {products.map((product, index) => {
-            if (index < productsPerPage && index > startIndex) {
+            if (index > startIndex) {
               return (
                 <SwiperSlide key={uuidv4()}>
                   <Link className="slider__link" to={`/${product.sku}`}>
                     <div className="slider__product">
                       <img src={product.media.source} alt={product.name} />
-                      <h3>{product.name}</h3>
-                      <h5>{product.price.formatted}</h5>
+                      <h5>{product.name}</h5>
+                      <p className="text_small">{product.price.formatted}</p>
                     </div>
                   </Link>
                 </SwiperSlide>

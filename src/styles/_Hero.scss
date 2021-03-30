@@ -45,7 +45,11 @@
     }
 }
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    .hero {
+        padding: 5rem 0 10rem;
+    }
+}
 
 // HI RES
 @media screen and (min-width: 1200px) {}

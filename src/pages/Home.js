@@ -31,7 +31,6 @@ const Home = () => {
       <AboutSection />
       <ProductSlider
         sliderTitle={"You may also like"}
-        productsPerPage={12}
         startIndex={6}
         products={products}
         loading={loading}

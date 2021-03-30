@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
-// PRODUCTS
-import dummyProducts from "../../DummyProducts";
-
 // COMPONENTS
 import Pagination from "./Pagination";
 
@@ -46,7 +43,7 @@ const ProductGallery = (props) => {
               <div className="gallery__product">
                 <img src={product.media.source} alt={product.name} />
                 <h3>{product.name}</h3>
-                <h5>{product.price.formatted}</h5>
+                <p>{product.price.formatted}</p>
               </div>
             </Link>
           );
@@ -55,7 +52,7 @@ const ProductGallery = (props) => {
       {showPagination && (
         <Pagination
           productsPerPage={productsPerPage}
-          totalProducts={dummyProducts.length}
+          totalProducts={products.length}
           paginate={paginate}
           currentPage={currentPage}
         />
