@@ -6,9 +6,21 @@ import { v4 as uuidv4 } from "uuid";
 import Pagination from "./Pagination";
 
 const ProductGallery = (props) => {
+  // NAVIGATE TO PRODUCT PAGE
   const location = useLocation();
   const path = location.pathname.split("/");
+  console.log(path[2]);
+  const pathToUse = (productSku) => {
+    if (path.length === 2) {
+      return `/products/${productSku}`;
+    }
+    if (path.length === 3) {
+      return `/collections/${path[2]}/${productSku}`;
+    }
+  };
+
   const currentCategory = path[path.length - 1];
+
   // PRODUCTS
   const { products, loading } = props;
   // PAGINATION
@@ -20,7 +32,6 @@ const ProductGallery = (props) => {
     indexOfFirstProduct,
     indexOfLastProduct
   );
-  // CHANGE PAGE
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
     window.scrollTo(0, 0);
@@ -38,7 +49,7 @@ const ProductGallery = (props) => {
             <Link
               key={uuidv4()}
               className="gallery__link"
-              to={`/collections/${currentCategory}/${product.sku}`}
+              to={pathToUse(product.sku)}
             >
               <div className="gallery__product">
                 <img src={product.media.source} alt={product.name} />

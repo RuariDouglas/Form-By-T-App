@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 
 // COMPONENTS
 import Breadcrumb from "../components/Breadcrumb";
+import ProductImages from "../components/product/ProductImages";
+
+// DUMMY IMAGE
 
 const Product = () => {
   useEffect(() => {
@@ -10,6 +13,7 @@ const Product = () => {
   return (
     <div className="product">
       <Breadcrumb />
+      <ProductImages />
     </div>
   );
 };

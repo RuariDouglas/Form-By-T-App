@@ -17,7 +17,13 @@ const App = () => {
     <>
       <Header />
       <Switch>
-        <Route path="/collections/:collectionName/:productSku" exact>
+        <Route
+          path={[
+            "/collections/:collectionName/:productSku",
+            "/products/:productSku",
+          ]}
+          exact
+        >
           <Product />
         </Route>
         <Route path="/collections/:collectionName">
