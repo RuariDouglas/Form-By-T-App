@@ -4,27 +4,18 @@
     flex-flow: row wrap;
     min-height: 50vh;
     align-items: center;
-    img {
-        margin-bottom: 2rem;
-        order: 1;
-        width: 9rem;
-    }
-    p {
-        width: 100%;
-        order: 2;
+    justify-content: center;
+    width: 100%;
+    h4 {
+        width: 80%;
     }
 }
 
 // MEDIA QUERIES
 @media screen and (min-width: 576px) {
     .about-section {
-        justify-content: space-between;
-        img {
-            margin-bottom: 0;
-            width: 25%;
-        }
-        p {
-            width: 65%;
+        h4 {
+            width: 70%;
         }
     }
 }
@@ -32,13 +23,6 @@
 @media screen and (min-width: 768px) {
     .about-section {
         padding: 2rem;
-        justify-content: space-evenly;
-        img {
-            max-width: 9rem;
-        }
-        p {
-            max-width: 30rem;
-        }
     }
 }
 
@@ -46,7 +30,7 @@
 
 @media screen and (min-width: 1200px) {
     .about-section {
-        max-width: 70vw;
+        max-width: 50vw;
         margin: 2rem auto;
     }
 }

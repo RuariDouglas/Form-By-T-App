@@ -34,7 +34,7 @@ const ProductSlider = (props) => {
               slidesPerView: 4,
             },
             1024: {
-              slidesPerView: 5,
+              slidesPerView: 6,
             },
           }}
           scrollbar={{ draggable: true }}

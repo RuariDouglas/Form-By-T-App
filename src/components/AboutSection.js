@@ -6,7 +6,7 @@ import FormByT from "../images/formbyt.svg";
 const AboutSection = () => {
   return (
     <section className="about-section">
-      <p>
+      <h4>
         Form By T is a conscious brand upholding sustainable values at every
         point of the process whilst balancing attention to detail and quality.{" "}
         <br /> <br />
@@ -16,8 +16,7 @@ const AboutSection = () => {
         <br />
         Every piece is made to order with care by Tessa in her Melbourne home
         studio.
-      </p>
-      <img src={FormByT} alt="Form By T" />
+      </h4>
     </section>
   );
 };
